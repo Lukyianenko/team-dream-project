@@ -1,30 +1,80 @@
 .footer {
-  background-color: var($bg-hero-color);
+  position: relative;
+  background-color: $bg-hero-color;
+  padding-top: 40px;
+  padding-bottom: 62px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 13px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 120px;
+    padding-bottom: 11px;
+  }
 }
+.footer__wrapper {
+  display: block;
+  // position: relative;
+  border-bottom: 1px solid #e1e1e1;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 54px;
+  }
+}
+// .footer__wrapper::after {
+//   display: inline-block;
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 1px;
+//   background-color: #e1e1e1;
+// }
+
+.footer__box1 {
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 352px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+    width: auto;
+  }
+}
+
 .footer__subtitle {
+  margin-bottom: 16px;
+
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
 
-  color: var($primery-text-color);
-
-  @media screen and (min-width: 480px) {
-  }
+  color: $primery-text-color;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 9px;
     font-size: 26px;
     line-height: 32px;
   }
 
   @media screen and (min-width: 1200px) {
+    margin-bottom: 14px;
     font-weight: 400;
     font-size: 38px;
     line-height: 37px;
   }
 }
 .footer__title {
+  margin-bottom: 42px;
+
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 34px;
@@ -32,14 +82,12 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-  color: var($primery-text-color);
-
-  @media screen and (min-width: 480px) {
-  }
+  color: $primery-text-color;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
     line-height: 59px;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -47,26 +95,82 @@
     line-height: 71px;
   }
 }
-.footer__list {
+.footer__box2 {
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-top: 73px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
+.footer__list {
+  margin-bottom: 38px;
+  justify-content: end;
+
+  display: flex;
+  gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 40px;
+  }
+}
+
 .footer__item {
+  display: block;
 }
 .footer__link {
+  display: flex;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8d24e;
 }
+.footer__link:hover {
+  height: 32px;
+  width: 32px;
+}
+.footer__link:focus {
+  height: 32px;
+  width: 32px;
+}
+
+.footer__link:hover .footer__icon,
+.footer__link:focus .footer__icon {
+  fill: #fcfcfc;
+}
+
 .footer__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: $bg-hero-color;
 }
+
 .footer__phone {
+  display: block;
+  margin-bottom: 40px;
+
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 12px;
   line-height: 186%;
-  color: var($third-text-color);
-
-  @media screen and (min-width: 480px) {
-  }
+  text-align: right;
+  text-decoration: none;
+  color: $third-text-color;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -79,10 +183,7 @@
   font-size: 12px;
   line-height: 186%;
 
-  color: var($primery-text-color);
-
-  @media screen and (min-width: 480px) {
-  }
+  color: $primery-text-color;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -93,18 +194,14 @@
   }
 }
 .footer__copy {
+  padding-top: 16px;
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 14px;
   line-height: 152%;
+  text-align: center;
 
-  color: var($dark-grey-color);
-
-  @media screen and (min-width: 480px) {
-  }
-
-  @media screen and (min-width: 768px) {
-  }
+  color: $dark-grey-color;
 
   @media screen and (min-width: 1200px) {
     font-size: 12px;
